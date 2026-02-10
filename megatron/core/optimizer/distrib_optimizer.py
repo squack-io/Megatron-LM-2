@@ -1222,7 +1222,7 @@ class DistributedOptimizer(MixedPrecisionOptimizer):
             )
         else:
             sharding_type = (metadata or {}).get(
-                'distrib_optim_sharding_type', 'fully_sharded_model_space'
+                'distrib_optim_sharding_type', 'fully_reshardable'
             )
 
         # Handle FSDP DistributedOptimizer States
